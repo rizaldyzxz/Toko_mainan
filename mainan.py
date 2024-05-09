@@ -35,6 +35,26 @@ def main():
         except KeyError:
             print("Maaf, kode mainan yang dimasukkan tidak valid.")
             continue
+        
+        # Menanyakan jumlah mainan
+        while True:
+            try:
+                jumlah_mainan = int(input(f"Berapa banyak {main_dipilih} yang ingin Anda beli? "))
+                break
+            except ValueError:
+                print("Jumlah mainan harus berupa angka. Coba lagi.")
+
+        # Menghitung total harga
+        total_harga = jumlah_mainan * harga[pilihan_mainan]
+
+        # Menampilkan detail pembelian
+        print(f"\nPembelian {name}:")
+        print(f"{jumlah_mainan}x {main_dipilih} - Rp{total_harga}")
+
+        # Menanyakan kelanjutan pembelian
+        lagi = input("Apakah Anda ingin membeli lagi (ya/tidak)? ")
+        if lagi != "ya":
+            break
 
         
 

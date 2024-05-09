@@ -26,35 +26,17 @@ def main():
         # Meminta pilihan mainan
         pilihan_mainan = input("Masukkan kode mainan yang ingin dibeli (atau 'keluar' untuk selesai): ")
 
-    #     if pilihan_mainan == "keluar":
-    #         break
+        if pilihan_mainan == "keluar":
+            break
 
-        # # Validasi input kode mainan
-        # try:
-        #     main_dipilih = mainan[pilihan_mainan]
-        # except KeyError:
-        #     print("Maaf, kode mainan yang dimasukkan tidak valid.")
-        #     continue
+        # Validasi input kode mainan
+        try:
+            main_dipilih = mainan[pilihan_mainan]
+        except KeyError:
+            print("Maaf, kode mainan yang dimasukkan tidak valid.")
+            continue
 
-        # # Menanyakan jumlah mainan
-        # while True:
-        #     try:
-        #         jumlah_mainan = int(input(f"Berapa banyak {main_dipilih} yang ingin Anda beli? "))
-        #         break
-        #     except ValueError:
-        #         print("Jumlah mainan harus berupa angka. Coba lagi.")
-
-        # # Menghitung total harga
-        # total_harga = jumlah_mainan * harga[pilihan_mainan]
-
-        # # Menampilkan detail pembelian
-        # print(f"\nPembelian {name}:")
-        # print(f"{jumlah_mainan}x {main_dipilih} - Rp{total_harga}")
-
-        # # Menanyakan kelanjutan pembelian
-        # lagi = input("Apakah Anda ingin membeli lagi (ya/tidak)? ")
-        # if lagi != "ya":
-        #     break
+        
 
     # Pesan perpisahan
     print("\nTerima kasih telah berbelanja di Toko Mainan!")
